@@ -1,0 +1,20 @@
+<!-- editpost.ejs -->
+<%- include("partials/header.ejs") %>
+<main>
+    <form id="post-form" action="/update-post/<%= index %>" method="post">
+        <h1>Edit the Entry</h1>
+
+        <div class="form-group">
+            <label for="post-title">Title:</label>
+            <input type="text" name="title" value="<%= title %>">
+        </div>
+
+        <div class="form-group">
+            <label for="post-description">Description:</label>
+            <textarea name="description" id="" cols="30" rows="10"><%= description %></textarea>
+        </div>
+
+        <button type="submit" id="update-btn"><h1>Confirm Edit</h1></button>
+    </form>
+</main>
+<%- include("partials/footer.ejs") %>

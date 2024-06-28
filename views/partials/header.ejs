@@ -1,0 +1,32 @@
+<!-- header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>My Cozy Diary</title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <h1 id="logo"><span>My</span> Cozy Diary</h1>
+        </div>
+
+        <form action="/search" method="post">
+            <input type="search" name="search" id="search" placeholder="Search">
+            <button id="search-btn" type="submit">Search</button>
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+
+                <li>Browse</li>
+
+                <li><a href="/addpost">Add Post</a></li>
+
+                <li>Profile</li>
+            </ul>
+        </nav>
+    </header>

@@ -1,0 +1,31 @@
+<!-- index.ejs -->
+<%- include("partials/header.ejs") %>
+<main>
+    <% if(locals.posts.length > 0){ %>
+        <h1 id="my-memories-text">My Memories</h1>
+
+        <% posts.forEach((element, index) => { %>
+            
+        <div class="post">
+            <div class="post-icons">
+                <button class="edit-btn" post-index="<%= index %>"><img src="/images/icons/edit.svg"></button>
+                <button class="delete-btn" post-index="<%= index %>"><img src="/images/icons/delete.svg"></button>
+            </div>
+            <h2><%= element.title %></h2>
+            <p>
+                <%= element.description%>
+            </p>
+        </div>
+        <% }); %>
+
+
+
+    <% } else{ %>
+        <h1 id="my-memories-text">Add Memories</h1>
+
+        <button id="add-memory-btn">Add Entry</button>
+    <% } %>
+
+
+</main>
+<%- include("partials/footer.ejs") %>
